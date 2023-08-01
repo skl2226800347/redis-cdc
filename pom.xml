@@ -29,6 +29,8 @@
         <google-collections.version>1.0</google-collections.version>
         <app-session.version>1.0.0-SNAPSHOT</app-session.version>
         <logback.version>1.2.3</logback.version>
+        <curator.version>4.0.1</curator.version>
+        <zookeeper.version>3.4.13</zookeeper.version>
     </properties>
 
 <dependencyManagement>
@@ -137,6 +139,23 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+        </dependency>
+
+        <!--curator-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>${curator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>${curator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>${zookeeper.version}</version>
         </dependency>
     </dependencies>
 </dependencyManagement>
