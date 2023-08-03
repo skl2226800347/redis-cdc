@@ -129,4 +129,22 @@ public class CuratorZookeeperClient extends AbstractZookeeperClient {
             logger.warn("doDelete e:",e);
         }
     }
+
+    @Override
+    public byte[] getData(String path) {
+        try {
+            byte[] data =client.getData().forPath(path);
+            return data;
+        }catch (Exception e){
+            logger.warn("getData e:",e);
+            return  null;
+        }
+    }
+
+    @Override
+    public void close() {
+        client.close();
+    }
+
+
 }
